@@ -1,0 +1,674 @@
+/*==========================
+    CONFIGURAÇÕES GERAIS
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #E8F8E8,
+        #FFF8CC,
+        #DCEBFF
+    );
+
+    color:#333;
+
+    line-height:1.8;
+
+}
+
+
+/*==========================
+          HEADER
+==========================*/
+
+
+header{
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    ),
+    url("img/banner.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+    height:80vh;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    text-align:center;
+
+    color:white;
+
+    position:relative;
+
+    overflow:hidden;
+
+
+    box-shadow:0 8px 25px rgba(0,0,0,.4);
+
+}
+
+
+
+header::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    top:-250px;
+
+    right:-150px;
+
+    filter:blur(20px);
+
+}
+
+
+
+header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    background:rgba(255,215,0,.15);
+
+    border-radius:50%;
+
+    bottom:-180px;
+
+    left:-120px;
+
+    filter:blur(20px);
+
+}
+
+
+
+header h1{
+
+    font-size:4.5rem;
+
+    font-weight:900;
+
+    letter-spacing:4px;
+
+    text-shadow:0 5px 20px black;
+
+    z-index:2;
+
+    animation:entrada 1.5s;
+
+}
+
+
+
+header h1::after{
+
+    content:"";
+
+    display:block;
+
+    width:180px;
+
+    height:5px;
+
+    background:#FFD700;
+
+    margin:20px auto;
+
+    border-radius:10px;
+
+}
+
+
+
+@keyframes entrada{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*==========================
+            MENU
+==========================*/
+
+
+nav{
+
+    position:sticky;
+
+    top:0;
+
+    background:rgba(11,122,57,.95);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    padding:15px;
+
+    z-index:999;
+
+}
+
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    transition:.4s;
+
+}
+
+
+
+nav a:hover{
+
+    background:#FFD700;
+
+    color:#222;
+
+    transform:translateY(-4px);
+
+}
+
+
+
+/*==========================
+          CONTEÚDO
+==========================*/
+
+
+main{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:50px auto;
+
+}
+
+
+
+/*==========================
+          SEÇÕES
+==========================*/
+
+
+.caixa{
+
+    background:rgba(255,255,255,.92);
+
+    margin:40px 0;
+
+    padding:35px;
+
+
+    /* borda solid obrigatória */
+
+    border-left:8px solid #0B7A39;
+
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+}
+
+
+
+.caixa:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+h2{
+
+    color:#1E3A8A;
+
+    font-size:2.2rem;
+
+    margin-bottom:20px;
+
+}
+
+
+
+h3{
+
+    color:#0B7A39;
+
+    margin:20px 0;
+
+}
+
+
+
+p{
+
+    font-size:18px;
+
+    text-align:justify;
+
+    margin-bottom:15px;
+
+}
+
+
+
+/*==========================
+             GRID
+==========================*/
+
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.card{
+
+    background:#FFFEE3;
+
+    padding:25px;
+
+
+    /* borda dashed obrigatória */
+
+    border:3px dashed #1E3A8A;
+
+
+    border-radius:20px;
+
+    transition:.4s;
+
+}
+
+
+
+.card:hover{
+
+    background:#FFF3B0;
+
+    transform:scale(1.05);
+
+}
+
+
+
+/*==========================
+             FLEX
+==========================*/
+
+
+.flex{
+
+    display:flex;
+
+    gap:30px;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+/*==========================
+           IMAGENS
+==========================*/
+
+
+img{
+
+    width:100%;
+
+    max-width:450px;
+
+    display:block;
+
+    margin:25px auto;
+
+
+    border:6px solid white;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    transition:.5s;
+
+}
+
+
+
+img:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/*==========================
+            LISTAS
+==========================*/
+
+
+ul{
+
+    margin-top:20px;
+
+    padding:25px 40px;
+
+    background:#EEF9EE;
+
+
+    /* borda dotted obrigatória */
+
+    border:4px dotted #0B7A39;
+
+
+    border-radius:20px;
+
+}
+
+
+
+ol{
+
+    margin-top:20px;
+
+    padding:25px 40px;
+
+    background:#FFFDE7;
+
+
+    /* borda double obrigatória */
+
+    border:6px double #FFD700;
+
+
+    border-radius:20px;
+
+}
+
+
+
+li{
+
+    margin:10px 0;
+
+}
+
+
+
+/*==========================
+            LINKS
+==========================*/
+
+
+a{
+
+    color:#1E3A8A;
+
+    transition:.3s;
+
+}
+
+
+
+a:hover{
+
+    color:#0B7A39;
+
+}
+
+
+
+/*==========================
+           RODAPÉ
+==========================*/
+
+
+footer{
+
+    background:linear-gradient(
+        90deg,
+        #0B7A39,
+        #1E3A8A
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px;
+
+    margin-top:50px;
+
+}
+
+
+
+footer p{
+
+    text-align:center;
+
+}
+
+
+
+/*==========================
+      BOTÃO VOLTAR AO TOPO
+==========================*/
+
+
+.botao-topo{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+
+    width:65px;
+
+    height:65px;
+
+
+    border:none;
+
+    border-radius:50%;
+
+
+    background:linear-gradient(
+        135deg,
+        #FFD700,
+        #F5C400
+    );
+
+
+    color:#222;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:9999;
+
+
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+
+    transition:.4s;
+
+}
+
+
+
+.botao-topo:hover{
+
+    background:linear-gradient(
+        135deg,
+        #0B7A39,
+        #15803D
+    );
+
+
+    color:white;
+
+    transform:scale(1.15) rotate(360deg);
+
+}
+
+
+
+/*==========================
+       RESPONSIVIDADE
+==========================*/
+
+
+@media(max-width:768px){
+
+
+    header{
+
+        height:65vh;
+
+    }
+
+
+    header h1{
+
+        font-size:2.5rem;
+
+    }
+
+
+    nav{
+
+        gap:10px;
+
+    }
+
+
+    nav a{
+
+        padding:10px 15px;
+
+    }
+
+
+    .flex{
+
+        flex-direction:column;
+
+    }
+
+
+    .caixa{
+
+        padding:25px;
+
+    }
+
+}
